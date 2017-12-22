@@ -1,7 +1,7 @@
 Package: walmartAPI
 Type: Package
 Title: Walmart Open API Wrapper
-Version: 0.1.0
+Version: 0.1.01
 Authors@R: person("Emil", "Hvitfeldt", email = "emilhhvitfeldt@gmail.com", role = c("aut", "cre"))
 Description: API for accessing the Walmart Open API.
 License: MIT + file LICENSE
@@ -9,10 +9,11 @@ Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 6.0.1
-Depends: 
-    dplyr
-Imports:
+Imports: 
     glue,
     purrr,
     httr,
-    tibble
+    tibble,
+    magrittr,
+    stringr,
+    dplyr

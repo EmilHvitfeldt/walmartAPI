@@ -4,7 +4,7 @@
 \alias{taxonomy}
 \title{The category taxonomy used by walmart.com to categorize items}
 \usage{
-taxonomy(key, list_output = FALSE)
+taxonomy(key = NULL, list_output = FALSE)
 }
 \arguments{
 \item{key}{Your API access key.}
@@ -30,9 +30,11 @@ For more information refer to the original documentation
 \url{https://developer.walmartlabs.com/docs/read/Taxonomy_API}.
 }
 \examples{
+\dontrun{
 key <- "************************"
 
 taxonomy(key = key)
 
 taxonomy(key = key, list_output)
+}
 }

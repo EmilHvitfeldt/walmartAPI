@@ -1,6 +1,6 @@
-#' Search with text the Walmart catalogue
+#' searching with text the Walmart catalogue
 #'
-#' \code{\link{Search}} allows text search on the Walmart.com catalogue and
+#' \code{searching} allows text search on the Walmart.com catalogue and
 #'  returns matching items available for sale online.
 
 #' An API key will be required to run this function and can be aqquired by
@@ -37,27 +37,32 @@
 #' @param list_output Indicator for list output.
 #' @return A tibble with 15 columns in base response format.
 #' @examples
+#' \dontrun{
 #' key <- "************************"
 #'
-#' search(query = "ipod", key = key)
+#' searching(query = "ipod", key = key)
 #'
-#' search(query = "ipod", key = key, categoryId = 3944)
+#' searching(query = "ipod", key = key, categoryId = 3944)
 #'
-#' search(query = "ipod", key = key, start = 44)
+#' searching(query = "ipod", key = key, start = 44)
 #'
-#' search(query = "ipod", key = key, start = 44)
+#' searching(query = "ipod", key = key, start = 44)
 #'
-#' search(query = "ipod", key = key, numItems = 44)
+#' searching(query = "ipod", key = key, numItems = 44)
 #'
-#' search(query = "ipod", key = key, sort = "price", order = "asc")
+#' searching(query = "ipod", key = key, sort = "price", order = "asc")
 #'
-#' search(query = "ipod", key = key, sort = "bestseller")
+#' searching(query = "ipod", key = key, sort = "bestseller")
 #'
-#' search(query = "ipod", key = key, list_output = TRUE)
+#' searching(query = "ipod", key = key, list_output = TRUE)
+#' }
 #' @export
-search <- function(query, key, lsPublisherId = NULL, categoryId = NULL,
-                   start = NULL, sort = NULL, order = NULL, numItems = NULL,
-                   facet = FALSE, facet.filter = NULL, list_output = FALSE) {
+searching <- function(query, key = NULL, lsPublisherId = NULL,
+                      categoryId = NULL, start = NULL, sort = NULL, order = NULL,
+                      numItems = NULL, facet = FALSE, facet.filter = NULL,
+                      list_output = FALSE) {
+
+  if(is.null(key)) print("Please provide your apiKey to the 'key' argument")
 
   base_url <- "http://api.walmartlabs.com/v1/search"
   url <- glue::glue("{base_url}?apiKey={key}&query={query}")

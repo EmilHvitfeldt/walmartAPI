@@ -19,6 +19,7 @@
 #' @param list_output Indicator for list output.
 #' @return A tibble with 12 columns in base response format.
 #' @examples
+#' \dontrun{
 #' key <- "************************"
 #'
 #' store_locator(key = key, lat = 29, lon = -95)
@@ -28,9 +29,12 @@
 #' store_locator(key = key, zip = 77063)
 #'
 #' store_locator(key = key, zip = 77063, list_output = TRUE)
+#' }
 #' @export
-store_locator <- function(key, lat = NULL, lon = NULL, city = NULL, zip = NULL,
-                          list_output = FALSE) {
+store_locator <- function(key = NULL, lat = NULL, lon = NULL, city = NULL,
+                          zip = NULL, list_output = FALSE) {
+
+  if(is.null(key)) stop("Please provide your apiKey to the 'key' argument")
 
   base_url <- glue::glue("http://api.walmartlabs.com/v1/stores?apiKey={key}")
 

@@ -4,8 +4,8 @@
 \alias{paginted}
 \title{Looks up product information}
 \usage{
-paginted(key, lsPublisherId = NULL, category = NULL, brand = NULL,
-  specialOffer = NULL, list_output = FALSE)
+paginted(key = NULL, lsPublisherId = NULL, category = NULL,
+  brand = NULL, specialOffer = NULL, list_output = FALSE)
 }
 \arguments{
 \item{key}{Your API access key.}
@@ -41,6 +41,7 @@ Response formats are described at the url
 \url{https://developer.walmartlabs.com/docs/read/Item_Field_Description}.
 }
 \examples{
+\dontrun{
 key <- "************************"
 
 paginted(key = key, brand = "Apple")
@@ -50,4 +51,5 @@ paginted(key = key, category = 3944)
 paginted(key = key, category = 3944, specialOffer = "rollback")
 
 paginted(key = key, brand = "Apple", list_output = TRUE)
+}
 }

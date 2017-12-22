@@ -23,6 +23,7 @@
 #' @return A tibble with 16 columns. Firsst 15 is the items in base response
 #' format, followed by a column containing the URL path for the next page.
 #' @examples
+#' \dontrun{
 #' key <- "************************"
 #'
 #' paginted(key = key, brand = "Apple")
@@ -32,9 +33,12 @@
 #' paginted(key = key, category = 3944, specialOffer = "rollback")
 #'
 #' paginted(key = key, brand = "Apple", list_output = TRUE)
+#' }
 #' @export
-paginted <- function(key, lsPublisherId = NULL, category = NULL, brand = NULL,
+paginted <- function(key = NULL, lsPublisherId = NULL, category = NULL, brand = NULL,
                      specialOffer = NULL, list_output = FALSE) {
+
+  if(is.null(key)) stop("Please provide your apiKey to the 'key' argument")
 
   base_url <- "http://api.walmartlabs.com/v1/paginated/items"
   url <- glue::glue("{base_url}?apiKey={key}")
@@ -66,5 +70,5 @@ paginted <- function(key, lsPublisherId = NULL, category = NULL, brand = NULL,
     httr::content() %>%
     .[["items"]] %>%
     item_base_response() %>%
-    mutate(next_page = response %>% httr::content() %>% .$nextPage)
+    dplyr::mutate(next_page = response %>% httr::content() %>% .$nextPage)
 }

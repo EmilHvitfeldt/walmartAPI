@@ -17,13 +17,17 @@
 #' @param list_output Indicator for list output.
 #' @return A tibble with 15 columns in base response format.
 #' @examples
+#' \dontrun{
 #' key <- "************************"
 #'
 #'taxonomy(key = key)
 #'
 #'taxonomy(key = key, list_output)
+#'}
 #' @export
-taxonomy <- function(key, list_output = FALSE) {
+taxonomy <- function(key = NULL, list_output = FALSE) {
+
+  if(is.null(key)) stop("Please provide your apiKey to the 'key' argument")
 
   url <- glue::glue("http://api.walmartlabs.com/v1/taxonomy?apiKey={key}")
 

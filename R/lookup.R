@@ -19,6 +19,7 @@
 #' @param list_output Indicator for list output.
 #' @return A tibble with 15 columns in base response format.
 #' @examples
+#' \dontrun{
 #' key <- "************************"
 #'
 #' ## Up to 20 ids can be called at once.
@@ -32,9 +33,12 @@
 #' lookup(id = 12417837, upc = 10001137891, key = key)
 #'
 #' lookup(id = 12417832, key = key, list_output = TRUE)
+#' }
 #' @export
-lookup <- function(key, lsPublisherId = NULL, id = NULL, upc = NULL,
+lookup <- function(key = NULL, lsPublisherId = NULL, id = NULL, upc = NULL,
                    list_output = FALSE) {
+
+  if(is.null(key)) stop("Please provide your apiKey to the 'key' argument")
 
   base_url <- "http://api.walmartlabs.com/v1/items?&format=json"
 

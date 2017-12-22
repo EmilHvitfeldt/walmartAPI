@@ -4,7 +4,7 @@
 \alias{VOD}
 \title{Value of the day}
 \usage{
-VOD(key, list_output = FALSE)
+VOD(key = NULL, list_output = FALSE)
 }
 \arguments{
 \item{key}{Your API access key.}
@@ -26,7 +26,9 @@ Response formats are described at the url
 \url{https://developer.walmartlabs.com/docs/read/Item_Field_Description}.
 }
 \examples{
+\dontrun{
 key <- "************************"
 
 VOD(key = key)
+}
 }

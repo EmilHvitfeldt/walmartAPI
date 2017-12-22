@@ -4,7 +4,7 @@
 \alias{lookup}
 \title{Looks up product information}
 \usage{
-lookup(key, lsPublisherId = NULL, id = NULL, upc = NULL,
+lookup(key = NULL, lsPublisherId = NULL, id = NULL, upc = NULL,
   list_output = FALSE)
 }
 \arguments{
@@ -36,6 +36,7 @@ Response formats are described at the url
 \url{https://developer.walmartlabs.com/docs/read/Item_Field_Description}.
 }
 \examples{
+\dontrun{
 key <- "************************"
 
 ## Up to 20 ids can be called at once.
@@ -49,4 +50,5 @@ lookup(upc = 10001137891, key = key)
 lookup(id = 12417837, upc = 10001137891, key = key)
 
 lookup(id = 12417832, key = key, list_output = TRUE)
+}
 }

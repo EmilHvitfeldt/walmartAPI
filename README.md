@@ -3,6 +3,8 @@
 walmartAPI
 ==========
 
+[![Travis build status](https://travis-ci.org/EmilHvitfeldt/walmartAPI.svg?branch=master)](https://travis-ci.org/EmilHvitfeldt/walmartAPI)
+
 The goal of walmartAPI is to give access to the API created by [walmartlabs](https://developer.walmartlabs.com/) to search products, locate stores etc etc.
 
 To use this package you will need an API key which you can acquire by signing up on this website <https://developer.walmartlabs.com/member>.
@@ -48,20 +50,21 @@ walmartAPI::search("ipod", key = key)
 ```
 
     #> # A tibble: 10 x 15
-    #>      itemId                                          name   msrp salePrice
-    #>       <int>                                         <chr>  <dbl>     <dbl>
-    #>  1 42608125                         Apple iPod touch 32GB 247.00    199.00
-    #>  2 42608121                         Apple iPod touch 16GB 189.99    219.99
-    #>  3 42608106                          Apple iPod nano 16GB 149.99    219.99
-    #>  4 21805445      Apple iPod touch 32GB  (Assorted Colors) 249.00    215.95
-    #>  5 46088111             Apple iPod touch 64GB, Space Gray     NA    249.00
-    #>  6 46088113                         Apple iPod touch 64GB 297.00    249.00
-    #>  7 21805451                          Apple iPod nano 16GB 149.99    119.99
-    #>  8 49650088        Refurbished Apple iPod nano 16GB, Blue 120.00    108.82
-    #>  9 46088119                        Apple iPod shuffle 2GB     NA    109.99
-    #> 10 22288790 iPod touch 64GB (Assorted Colors) Refurbished     NA    242.59
-    #> # ... with 11 more variables: upc <chr>, categoryPath <chr>,
-    #> #   longDescription <chr>, thumbnailImage <chr>, productTrackingUrl <chr>,
+    #>       itemId
+    #>        <int>
+    #>  1  42608125
+    #>  2  42608121
+    #>  3  22288784
+    #>  4 541357139
+    #>  5  49802795
+    #>  6  54203936
+    #>  7  50689211
+    #>  8  12510108
+    #>  9 173544522
+    #> 10 172440769
+    #> # ... with 14 more variables: name <chr>, msrp <dbl>, salePrice <dbl>,
+    #> #   upc <chr>, categoryPath <chr>, longDescription <chr>,
+    #> #   thumbnailImage <chr>, productTrackingUrl <chr>,
     #> #   standardShipRate <dbl>, marketplace <lgl>, productUrl <chr>,
     #> #   availableOnline <lgl>, offerType <chr>, shippingPassEligible <lgl>
 

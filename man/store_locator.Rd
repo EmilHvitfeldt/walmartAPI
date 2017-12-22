@@ -4,8 +4,8 @@
 \alias{store_locator}
 \title{Locale nearby Walmart stores}
 \usage{
-store_locator(key, lat = NULL, lon = NULL, city = NULL, zip = NULL,
-  list_output = FALSE)
+store_locator(key = NULL, lat = NULL, lon = NULL, city = NULL,
+  zip = NULL, list_output = FALSE)
 }
 \arguments{
 \item{key}{Your API access key.}
@@ -37,6 +37,7 @@ For more information refer to the original documentation
 \url{https://developer.walmartlabs.com/docs/read/Store_Locator_API}.
 }
 \examples{
+\dontrun{
 key <- "************************"
 
 store_locator(key = key, lat = 29, lon = -95)
@@ -46,4 +47,5 @@ store_locator(key = key, city = "Houston")
 store_locator(key = key, zip = 77063)
 
 store_locator(key = key, zip = 77063, list_output = TRUE)
+}
 }

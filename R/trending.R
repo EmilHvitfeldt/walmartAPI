@@ -18,13 +18,17 @@
 #' @param list_output Indicator for list output.
 #' @return A tibble with 15 columns in base response format.
 #' @examples
+#' \dontrun{
 #' key <- "************************"
 #'
 #'trending(key = key)
 #'
 #'trending(key = key, list_output = TRUE)
+#'}
 #' @export
-trending <- function(key, lsPublisherId = NULL, list_output = FALSE) {
+trending <- function(key = NULL, lsPublisherId = NULL, list_output = FALSE) {
+
+  if(is.null(key)) stop("Please provide your apiKey to the 'key' argument")
 
   url <- glue::glue("http://api.walmartlabs.com/v1/trends?apiKey={key}")
 

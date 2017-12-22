@@ -4,7 +4,7 @@
 \alias{trending}
 \title{Trending products at Walmart.com}
 \usage{
-trending(key, lsPublisherId = NULL, list_output = FALSE)
+trending(key = NULL, lsPublisherId = NULL, list_output = FALSE)
 }
 \arguments{
 \item{key}{Your API access key.}
@@ -32,9 +32,11 @@ Response formats are described at the url
 \url{https://developer.walmartlabs.com/docs/read/Item_Field_Description}.
 }
 \examples{
+\dontrun{
 key <- "************************"
 
 trending(key = key)
 
 trending(key = key, list_output = TRUE)
+}
 }
