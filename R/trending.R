@@ -21,9 +21,9 @@
 #' \dontrun{
 #' key <- "************************"
 #'
-#'trending(key = key)
+#' trending(key = key)
 #'
-#'trending(key = key, list_output = TRUE)
+#' trending(key = key, list_output = TRUE)
 #'}
 #' @export
 trending <- function(key = NULL, lsPublisherId = NULL, list_output = FALSE) {

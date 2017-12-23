@@ -20,9 +20,9 @@
 #' \dontrun{
 #' key <- "************************"
 #'
-#'taxonomy(key = key)
+#' taxonomy(key = key)
 #'
-#'taxonomy(key = key, list_output)
+#' taxonomy(key = key, list_output)
 #'}
 #' @export
 taxonomy <- function(key = NULL, list_output = FALSE) {
@@ -44,6 +44,6 @@ taxonomy <- function(key = NULL, list_output = FALSE) {
   response %>%
     httr::content() %>%
     purrr::flatten() %>%
-    purrr::map_df(~ tibble(id = .x$id,
-                           name = .x$name))
+    purrr::map_df(~ tibble::tibble(id = .x$id,
+                                   name = .x$name))
 }

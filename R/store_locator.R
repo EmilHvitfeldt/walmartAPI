@@ -63,16 +63,16 @@ store_locator <- function(key = NULL, lat = NULL, lon = NULL, city = NULL,
 
   response %>%
     httr::content() %>%
-    purrr::map_df(~ tibble(no = ifelse_null(.$no),
-                           name = ifelse_null(.$name),
-                           country = ifelse_null(.$country),
-                           lon = ifelse_null(.$coordinates[[1]]),
-                           lat = ifelse_null(.$coordinates[[2]]),
-                           streetAddress = ifelse_null(.$streetAddress),
-                           city = ifelse_null(.$city),
-                           stateProvCode = ifelse_null(.$stateProvCode),
-                           zip = ifelse_null(.$zip),
-                           phoneNumber = ifelse_null(.$phoneNumber),
-                           sundayOpen = ifelse_null(.$sundayOpen),
-                           timezone = ifelse_null(.$timezone),))
+    purrr::map_df(~ tibble::tibble(no = ifelse_null(.$no),
+                                   name = ifelse_null(.$name),
+                                   country = ifelse_null(.$country),
+                                   lon = ifelse_null(.$coordinates[[1]]),
+                                   lat = ifelse_null(.$coordinates[[2]]),
+                                   streetAddress = ifelse_null(.$streetAddress),
+                                   city = ifelse_null(.$city),
+                                   stateProvCode = ifelse_null(.$stateProvCode),
+                                   zip = ifelse_null(.$zip),
+                                   phoneNumber = ifelse_null(.$phoneNumber),
+                                   sundayOpen = ifelse_null(.$sundayOpen),
+                                   timezone = ifelse_null(.$timezone),))
 }

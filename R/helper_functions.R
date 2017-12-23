@@ -37,19 +37,22 @@ ifelse_null <- function(x) {
 #' @export
 item_base_response <- function(x) {
   purrr::map_df(x, ~
-                  tibble(itemId = ifelse_null(.$itemId),
-                         name = ifelse_null(.$name),
-                         msrp = ifelse_null(.$msrp),
-                         salePrice = ifelse_null(.$salePrice),
-                         upc = ifelse_null(.$upc),
-                         categoryPath = ifelse_null(.$categoryPath),
-                         longDescription = ifelse_null(.$longDescription),
-                         thumbnailImage = ifelse_null(.$thumbnailImage),
-                         productTrackingUrl = ifelse_null(.$productTrackingUrl),
-                         standardShipRate = ifelse_null(.$standardShipRate),
-                         marketplace = ifelse_null(.$marketplace),
-                         productUrl = ifelse_null(.$productUrl),
-                         availableOnline = ifelse_null(.$availableOnline),
-                         offerType = ifelse_null(.$offerType),
-                         shippingPassEligible = ifelse_null(.$shippingPassEligible)))
+                  tibble::tibble(
+                    itemId = ifelse_null(.$itemId),
+                    name = ifelse_null(.$name),
+                    msrp = ifelse_null(.$msrp),
+                    salePrice = ifelse_null(.$salePrice),
+                    upc = ifelse_null(.$upc),
+                    categoryPath = ifelse_null(.$categoryPath),
+                    longDescription = ifelse_null(.$longDescription),
+                    thumbnailImage = ifelse_null(.$thumbnailImage),
+                    productTrackingUrl = ifelse_null(.$productTrackingUrl),
+                    standardShipRate = ifelse_null(.$standardShipRate),
+                    marketplace = ifelse_null(.$marketplace),
+                    productUrl = ifelse_null(.$productUrl),
+                    availableOnline = ifelse_null(.$availableOnline),
+                    offerType = ifelse_null(.$offerType),
+                    shippingPassEligible = ifelse_null(.$shippingPassEligible)
+                    )
+                )
 }
