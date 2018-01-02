@@ -4,7 +4,7 @@
 \alias{VOD}
 \title{Value of the day}
 \usage{
-VOD(key = NULL, list_output = FALSE)
+VOD(key = auth_cache$KEY, list_output = FALSE)
 }
 \arguments{
 \item{key}{Your API access key.}
@@ -30,5 +30,7 @@ Response formats are described at the url
 key <- "************************"
 
 VOD(key = key)
+
+VOD(key = key, list_output = TRUE)
 }
 }

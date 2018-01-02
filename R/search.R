@@ -46,8 +46,6 @@
 #'
 #' searching(query = "ipod", key = key, start = 44)
 #'
-#' searching(query = "ipod", key = key, start = 44)
-#'
 #' searching(query = "ipod", key = key, numItems = 44)
 #'
 #' searching(query = "ipod", key = key, sort = "price", order = "asc")
@@ -57,12 +55,12 @@
 #' searching(query = "ipod", key = key, list_output = TRUE)
 #' }
 #' @export
-searching <- function(query, key = NULL, lsPublisherId = NULL,
-                      categoryId = NULL, start = NULL, sort = NULL, order = NULL,
-                      numItems = NULL, facet = FALSE, facet.filter = NULL,
-                      list_output = FALSE) {
+searching <- function(query, key = auth_cache$KEY, lsPublisherId = NULL,
+                      categoryId = NULL, start = NULL, sort = NULL,
+                      order = NULL, numItems = NULL, facet = FALSE,
+                      facet.filter = NULL, list_output = FALSE) {
 
-  if(is.null(key)) print("Please provide your apiKey to the 'key' argument")
+  if(is.null(key)) stop("No arguemnt to 'key'. Use save_walmart_credentials or supply appropriate arguments")
 
   base_url <- "http://api.walmartlabs.com/v1/search"
   url <- glue::glue("{base_url}?apiKey={key}&query={query}")

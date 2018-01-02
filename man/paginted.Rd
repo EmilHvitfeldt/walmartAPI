@@ -4,7 +4,7 @@
 \alias{paginted}
 \title{Looks up product information}
 \usage{
-paginted(key = NULL, lsPublisherId = NULL, category = NULL,
+paginted(key = auth_cache$KEY, lsPublisherId = NULL, category = NULL,
   brand = NULL, specialOffer = NULL, list_output = FALSE)
 }
 \arguments{

@@ -22,12 +22,12 @@
 #'
 #' taxonomy(key = key)
 #'
-#' taxonomy(key = key, list_output)
+#' taxonomy(key = key, list_output = TRUE)
 #'}
 #' @export
-taxonomy <- function(key = NULL, list_output = FALSE) {
+taxonomy <- function(key = auth_cache$KEY, list_output = FALSE) {
 
-  if(is.null(key)) stop("Please provide your apiKey to the 'key' argument")
+  if(is.null(key)) stop("No arguemnt to 'key'. Use save_walmart_credentials or supply appropriate arguments")
 
   url <- glue::glue("http://api.walmartlabs.com/v1/taxonomy?apiKey={key}")
 

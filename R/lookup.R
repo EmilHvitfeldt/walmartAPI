@@ -35,10 +35,10 @@
 #' lookup(id = 12417832, key = key, list_output = TRUE)
 #' }
 #' @export
-lookup <- function(key = NULL, lsPublisherId = NULL, id = NULL, upc = NULL,
+lookup <- function(key = auth_cache$KEY, lsPublisherId = NULL, id = NULL, upc = NULL,
                    list_output = FALSE) {
 
-  if(is.null(key)) stop("Please provide your apiKey to the 'key' argument")
+  if(is.null(key)) stop("No arguemnt to 'key'. Use save_walmart_credentials or supply appropriate arguments")
 
   base_url <- "http://api.walmartlabs.com/v1/items?&format=json"
 

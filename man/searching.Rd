@@ -4,9 +4,10 @@
 \alias{searching}
 \title{searching with text the Walmart catalogue}
 \usage{
-searching(query, key = NULL, lsPublisherId = NULL, categoryId = NULL,
-  start = NULL, sort = NULL, order = NULL, numItems = NULL,
-  facet = FALSE, facet.filter = NULL, list_output = FALSE)
+searching(query, key = auth_cache$KEY, lsPublisherId = NULL,
+  categoryId = NULL, start = NULL, sort = NULL, order = NULL,
+  numItems = NULL, facet = FALSE, facet.filter = NULL,
+  list_output = FALSE)
 }
 \arguments{
 \item{query}{Search text - whitespace separated sequence of keywords to
@@ -66,8 +67,6 @@ key <- "************************"
 searching(query = "ipod", key = key)
 
 searching(query = "ipod", key = key, categoryId = 3944)
-
-searching(query = "ipod", key = key, start = 44)
 
 searching(query = "ipod", key = key, start = 44)
 

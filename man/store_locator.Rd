@@ -4,7 +4,7 @@
 \alias{store_locator}
 \title{Locale nearby Walmart stores}
 \usage{
-store_locator(key = NULL, lat = NULL, lon = NULL, city = NULL,
+store_locator(key = auth_cache$KEY, lat = NULL, lon = NULL, city = NULL,
   zip = NULL, list_output = FALSE)
 }
 \arguments{

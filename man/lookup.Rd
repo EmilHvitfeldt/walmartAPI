@@ -4,8 +4,8 @@
 \alias{lookup}
 \title{Looks up product information}
 \usage{
-lookup(key = NULL, lsPublisherId = NULL, id = NULL, upc = NULL,
-  list_output = FALSE)
+lookup(key = auth_cache$KEY, lsPublisherId = NULL, id = NULL,
+  upc = NULL, list_output = FALSE)
 }
 \arguments{
 \item{key}{Your API access key.}

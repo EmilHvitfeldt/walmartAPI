@@ -35,10 +35,11 @@
 #' paginted(key = key, brand = "Apple", list_output = TRUE)
 #' }
 #' @export
-paginted <- function(key = NULL, lsPublisherId = NULL, category = NULL, brand = NULL,
-                     specialOffer = NULL, list_output = FALSE) {
+paginted <- function(key = auth_cache$KEY, lsPublisherId = NULL,
+                     category = NULL, brand = NULL, specialOffer = NULL,
+                     list_output = FALSE) {
 
-  if(is.null(key)) stop("Please provide your apiKey to the 'key' argument")
+  if(is.null(key)) stop("No arguemnt to 'key'. Use save_walmart_credentials or supply appropriate arguments")
 
   base_url <- "http://api.walmartlabs.com/v1/paginated/items"
   url <- glue::glue("{base_url}?apiKey={key}")

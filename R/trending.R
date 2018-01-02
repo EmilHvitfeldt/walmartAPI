@@ -26,11 +26,12 @@
 #' trending(key = key, list_output = TRUE)
 #'}
 #' @export
-trending <- function(key = NULL, lsPublisherId = NULL, list_output = FALSE) {
+trending <- function(key = auth_cache$KEY, lsPublisherId = NULL,
+                     list_output = FALSE) {
 
-  if(is.null(key)) stop("Please provide your apiKey to the 'key' argument")
+  if(is.null(key)) stop("No arguemnt to 'key'. Use save_walmart_credentials or supply appropriate arguments")
 
-  url <- glue::glue("http://api.walmartlabs.com/v1/trends?apiKey={key}")
+  url <- glue::glue("http://api.walmartlabs.com/v1/trends?apiKey={key}&format=json")
 
   if(!is.null(lsPublisherId)) {
     url <- glue::glue("{url}&lsPublisherId={lsPublisherId}")

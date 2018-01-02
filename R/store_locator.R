@@ -31,10 +31,10 @@
 #' store_locator(key = key, zip = 77063, list_output = TRUE)
 #' }
 #' @export
-store_locator <- function(key = NULL, lat = NULL, lon = NULL, city = NULL,
-                          zip = NULL, list_output = FALSE) {
+store_locator <- function(key = auth_cache$KEY, lat = NULL, lon = NULL,
+                          city = NULL, zip = NULL, list_output = FALSE) {
 
-  if(is.null(key)) stop("Please provide your apiKey to the 'key' argument")
+  if(is.null(key)) stop("No arguemnt to 'key'. Use save_walmart_credentials or supply appropriate arguments")
 
   base_url <- glue::glue("http://api.walmartlabs.com/v1/stores?apiKey={key}")
 

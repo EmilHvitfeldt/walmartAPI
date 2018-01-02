@@ -4,7 +4,7 @@
 \alias{taxonomy}
 \title{The category taxonomy used by walmart.com to categorize items}
 \usage{
-taxonomy(key = NULL, list_output = FALSE)
+taxonomy(key = auth_cache$KEY, list_output = FALSE)
 }
 \arguments{
 \item{key}{Your API access key.}
@@ -35,6 +35,6 @@ key <- "************************"
 
 taxonomy(key = key)
 
-taxonomy(key = key, list_output)
+taxonomy(key = key, list_output = TRUE)
 }
 }

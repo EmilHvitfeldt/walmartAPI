@@ -4,7 +4,7 @@
 \alias{trending}
 \title{Trending products at Walmart.com}
 \usage{
-trending(key = NULL, lsPublisherId = NULL, list_output = FALSE)
+trending(key = auth_cache$KEY, lsPublisherId = NULL, list_output = FALSE)
 }
 \arguments{
 \item{key}{Your API access key.}
