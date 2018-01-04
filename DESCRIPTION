@@ -1,7 +1,7 @@
 Package: walmartAPI
 Type: Package
 Title: Walmart Open API Wrapper
-Version: 0.1.4
+Version: 0.1.5
 Authors@R: person("Emil", "Hvitfeldt", email = "emilhhvitfeldt@gmail.com", role = c("aut", "cre"))
 Description: Provides API access to the Walmart Open API <https://developer.walmartlabs.com/>, 
     that contains data about stores, Value of the day and products which 
