@@ -1,12 +1,12 @@
 #' The category taxonomy used by walmart.com to categorize items
 #'
-#' This function returns the top level of catagories only, for further levels
+#' This function returns the top level of categories only, for further levels
 #' run function with \code{list_output = FALSE} for nested list.
 #'
 #' \code{\link{taxonomy}} gives returns the category taxonomy used by
 #' walmart.com to categorize items.
 #'
-#' An API key will be required to run this function and can be aqquired by
+#' An API key will be required to run this function and can be acquired by
 #' creating an account on the following website
 #' \url{https://developer.walmartlabs.com/member}.
 #'

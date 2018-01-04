@@ -21,7 +21,7 @@ A tibble with 15 columns in base response format.
 Walmart.com right now.
 }
 \details{
-An API key will be required to run this function and can be aqquired by
+An API key will be required to run this function and can be acquired by
 creating an account on the following website
 \url{https://developer.walmartlabs.com/member}.
 

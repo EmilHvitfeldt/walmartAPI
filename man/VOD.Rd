@@ -18,7 +18,7 @@ A tibble with 15 columns in base response format.
 \code{\link{VOD}} provides the Value of the Day item at walmart.
 }
 \details{
-An API key will be required to run this function and can be aqquired by
+An API key will be required to run this function and can be acquired by
 creating an account on the following website
 \url{https://developer.walmartlabs.com/member}.
 

@@ -22,7 +22,7 @@ id field from \code{\link{taxonomy}} function.}
 \item{list_output}{Indicator for list output.}
 }
 \value{
-A tibble with 16 columns. Firsst 15 is the items in base response
+A tibble with 16 columns. First 15 is the items in base response
 format, followed by a column containing the URL path for the next page.
 }
 \description{
@@ -30,7 +30,7 @@ format, followed by a column containing the URL path for the next page.
 real-time.
 }
 \details{
-An API key will be required to run this function and can be aqquired by
+An API key will be required to run this function and can be acquired by
 creating an account on the following website
 \url{https://developer.walmartlabs.com/member}.
 

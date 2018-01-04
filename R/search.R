@@ -3,7 +3,7 @@
 #' \code{searching} allows text search on the Walmart.com catalogue and
 #'  returns matching items available for sale online.
 
-#' An API key will be required to run this function and can be aqquired by
+#' An API key will be required to run this function and can be acquired by
 #' creating an account on the following website
 #' \url{https://developer.walmartlabs.com/member}.
 #'
@@ -20,7 +20,7 @@
 #' @param categoryId Category id of the category for search within a category.
 #'  This should match the id field from Taxonomy API.
 #' @param start Starting point of the results within the matching set of
-#' items - upto 10 items will be returned starting from this item.
+#' items - up to 10 items will be returned starting from this item.
 #' @param sort Sorting criteria, allowed sort types are (relevance, price,
 #'  title, bestseller, customerRating, new). Default sort is by relevance.
 #' @param order Sort ordering criteria, allowed values are (asc, desc).

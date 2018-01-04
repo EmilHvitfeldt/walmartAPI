@@ -3,7 +3,7 @@
 #' \code{\link{trending}} gives information on what is bestselling on
 #'  Walmart.com right now.
 #'
-#' An API key will be required to run this function and can be aqquired by
+#' An API key will be required to run this function and can be acquired by
 #' creating an account on the following website
 #' \url{https://developer.walmartlabs.com/member}.
 #'

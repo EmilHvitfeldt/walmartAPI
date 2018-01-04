@@ -10,7 +10,8 @@ save_walmart_credentials(app_key)
 \item{app_key}{application key}
 }
 \description{
-This functions caches the credentials to avoid need for entering it when calling other functions
+This functions caches the credentials to avoid need for entering it when
+calling other functions
 }
 \examples{
 # since not checking is preformed not to waste API calls
