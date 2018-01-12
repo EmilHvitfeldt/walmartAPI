@@ -1,3 +1,5 @@
+# walmartAPI 0.1.5.9000
+
 # walmartAPI 0.1.02
 
 * Added a `save_walmart_credentials()` function to caches the credentials to avoid need for entering every time a function is called.
