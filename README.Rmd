@@ -1,0 +1,73 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# walmartAPI
+
+[![Travis build status](https://travis-ci.org/EmilHvitfeldt/walmartAPI.svg?branch=master)](https://travis-ci.org/EmilHvitfeldt/walmartAPI) [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/walmartAPI)](https://cran.r-project.org/package=walmartAPI)
+![downloads](http://cranlogs.r-pkg.org/badges/grand-total/walmartAPI)
+
+The goal of **walmartAPI** is to give access to the API created by [walmartlabs](https://developer.walmartlabs.com/) to search products, locate stores etc etc.
+
+To use this package you will need an API key which you can acquire by signing up on this website https://developer.walmartlabs.com/member.
+
+## Installation
+
+**walmartAPI** is available on CRAN and can be installed normally with `install.packages(tidygraph).` or you can install **walmartAPI** from github with:
+
+```{r gh-installation, eval = FALSE}
+install.packages("walmartAPI")
+
+# install.packages("devtools")
+devtools::install_github("EmilHvitfeldt/walmartAPI")
+```
+
+## Examples
+
+This package provides a handful for functionalities. We are able to look up a specific product based on an ID.
+
+```{r, eval=FALSE}
+library(tidyverse)
+library(walmartAPI)
+
+key <- "************************"
+
+walmartAPI::lookup(id = 19336123, key = key)
+```
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(walmartAPI)
+walmartAPI::lookup(id = 19336123, key = "z2gz6g9jefqsjsye7fttakey")
+```
+
+search in products using plain text
+
+```{r, eval=FALSE}
+walmartAPI::searching("ipod", key = key)
+```
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+walmartAPI::searching("ipod", key = "z2gz6g9jefqsjsye7fttakey")
+```
+
+and locate stores in your area
+
+```{r, eval=FALSE}
+store_locator(city = "Houston", key = key)
+```
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+store_locator(city = "Houston", key = "z2gz6g9jefqsjsye7fttakey")
+```
