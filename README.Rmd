@@ -24,11 +24,14 @@ To use this package you will need an API key which you can acquire by signing up
 
 ## Installation
 
-**walmartAPI** is available on CRAN and can be installed normally with `install.packages(tidygraph).` or you can install **walmartAPI** from github with:
+**walmartAPI** is available on CRAN and can be installed normally with 
+
+```{r cran-installation, eval = FALSE}
+install.packages("walmartAPI") #from CRAN 
+``` 
+or you can install **walmartAPI** from github with:
 
 ```{r gh-installation, eval = FALSE}
-install.packages("walmartAPI")
-
 # install.packages("devtools")
 devtools::install_github("EmilHvitfeldt/walmartAPI")
 ```
