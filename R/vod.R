@@ -27,7 +27,7 @@ VOD <- function(key = auth_cache$KEY, list_output = FALSE) {
 
   url <- glue::glue("http://api.walmartlabs.com/v1/vod?format=json&apiKey={key}")
 
-  response <- httr::GET(url)
+  response <- httr::RETRY(verb = "GET", url)
 
   if (httr::http_type(response) != "application/json") {
     stop("API did not return json", call. = FALSE)

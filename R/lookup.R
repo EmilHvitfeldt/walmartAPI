@@ -53,7 +53,7 @@ lookup <- function(key = auth_cache$KEY, lsPublisherId = NULL, id = NULL, upc = 
     url <- glue::glue("{url}&lsPublisherId={lsPublisherId}")
   }
 
-  response <- httr::GET(url)
+  response <- httr::RETRY(verb = "GET", url)
 
   if (httr::http_type(response) != "application/json") {
     stop("API did not return json", call. = FALSE)

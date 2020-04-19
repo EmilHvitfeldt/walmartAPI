@@ -51,7 +51,7 @@ store_locator <- function(key = auth_cache$KEY, lat = NULL, lon = NULL,
     url <- glue::glue("{base_url}&lon={lon}&lat={lat}")
   }
 
-  response <- httr::GET(url)
+  response <- httr::RETRY(verb = "GET", url)
 
   if (httr::http_type(response) != "application/json") {
     stop("API did not return json", call. = FALSE)
